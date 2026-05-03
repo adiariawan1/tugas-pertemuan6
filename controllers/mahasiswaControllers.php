@@ -17,6 +17,12 @@ class mahasiswa {
         
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+    public function GetDataByNim($nim) {
+        $sql = "SELECT * FROM Mahasiswa WHERE nim = ?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([$nim]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 
     
     public function CreateData($nim, $nama, $jurusan, $alamat, $email, $no_hp) {

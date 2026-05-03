@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="856edd55-17fb-41ca-bb49-5c20f2e16049" />
+          <option name="name" value="kampus_db" />
+          <option name="dbmsName" value="UNKNOWN" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/kampus_db.sql" />
+            </array>
+          </option>
+          <option name="outLayout" value="File per object by schema.groovy" />
+        </State>
+      </list>
+    </option>
+  </component>
+</project>

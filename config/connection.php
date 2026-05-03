@@ -1,14 +1,18 @@
 <?php
-$Username = "root";
-$Password = "root";
-$dbname = "kampus_db";
-$charset = "utf8mb4";
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "kampus_db";
 
-$conn = new mysqli("localhost", $Username, $Password, $dbname);
-function connectDb(){
-    if ($conn->connect_error) {
-    die("gagal connect ke data base: " . $conn->connect_error);
-    }
+try {
+
+    $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
+
+
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+
+} catch (PDOException $e) {
+    die("Koneksi Database Gagal: " . $e->getMessage());
 }
-
 ?>
